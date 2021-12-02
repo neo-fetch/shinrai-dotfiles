@@ -138,8 +138,8 @@ keys = [
 ##############################################
 
     Key(["shift"], "Print", lazy.spawn("clip")),
-    Key([mod], "Print", lazy.spawn("crop")),
-    Key([], "Print", lazy.spawn("shot")),
+    Key([mod], "Print", lazy.spawn("flameshot gui -p ~/Pictures/Screenshots/")),
+    Key([], "Print", lazy.spawn("flameshot gui")),
 
 #####################3#########################
 ############## APPLICATIONS ###################
