@@ -8,7 +8,8 @@ from libqtile.command import lazy
 from libqtile import layout, bar, widget, hook
 from libqtile.lazy import lazy
 from typing import List  # noqa: F401
-os.system("xrandr --auto --output HDMI2 --primary --mode 2560x1080 --right-of eDP1") # && xwinwrap -ov -g 2560x1080+1920+0 -- mpv -wid WID /home/neo/Downloads/video.mp4 --no-osc --no-osd-bar --loop-file --player-operation-mode=cplayer --no-audio --panscan=1.0 --no-input-default-bindings &")
+from settings import autostart
+os.system("xrandr --output DP-0 --primary --right-of HDMI-0") # && xwinwrap -ov -g 2560x1080+1920+0 -- mpv -wid WID /home/neo/Downloads/video.mp4 --no-osc --no-osd-bar --loop-file --player-operation-mode=cplayer --no-audio --panscan=1.0 --no-input-default-bindings &")
 
 #mod4 or mod = super key
 mod = "mod4"
@@ -39,6 +40,7 @@ def window_to_next_group(qtile):
 keys = [
     Key([mod], "d", lazy.spawn("rofi -show drun")),
     Key([], "F4", lazy.spawn("dmenu_run -c -l 15 -i")),
+    Key([mod, "shift"], "z", lazy.spawn("google-chrome-stable")),
 
 
 ##################################################
@@ -122,8 +124,6 @@ keys = [
     Key([mod, "shift"], "m", lazy.layout.grow_right()),
     Key([mod, "shift"], "n", lazy.layout.normalize()),
     Key([mod], "z", lazy.layout.toggle_split()),
-
-
 
 # Toggle between different layouts as defined below
     Key([mod], "Tab", lazy.next_layout()),
@@ -345,6 +345,13 @@ screens = [
                 measure_mem='G',
                 format='{MemUsed: .2f} GB',
             ),
+            widget.MemoryGraph(
+                background=colors[3],
+                foreground=colors[5],
+                graph_color=colors[5],
+                border_color=colors[3],
+                samples=30
+            ),
             widget.TextBox(
                 text="\ue0b4",
                 fonts="MesloLGS NF",
@@ -392,6 +399,13 @@ screens = [
                 font='MesloLGS NF',
                 fontsize=16
             ),
+            widget.CPUGraph(
+                background=colors[3],
+                foreground=colors[5],
+                graph_color=colors[5],
+                border_color=colors[3],
+                samples=30
+            ),
             widget.Sep(
                 background=colors[3],
                 padding=6,
@@ -410,62 +424,26 @@ screens = [
             widget.TextBox(
                 text="\uE0B6",
                 fonts="MesloLGS NF",
-                foreground=colors[4],
+                foreground=colors[7],
                 background=colors[3],
                 padding=0,
                 fontsize=38
             ),
-            widget.Volume(
-                background=colors[4],
-                foreground=colors[0],
-                font="MesloLGS NF",
-                fontsize=16,
-                mouse_callbacks={'Button3': lambda: qtile.cmd_spawn("pavucontrol")},
-                # update_interval=0.001,
-            ),
             widget.Sep(
-                background=colors[4],
+                background=colors[7],
                 padding=10,
                 linewidth=0,
             ),
-            widget.TextBox(
-                text="\uE0B6",
-                fonts="MesloLGS NF",
-                foreground=colors[7],
-                background=colors[4],
-                padding=0,
-                fontsize=38
+            widget.NetGraph(
+                foreground=colors[5],
+                background=colors[7],
+                graph_color=colors[6],
+                border_color=colors[7],
+                samples=30
             ),
             widget.Sep(
                 background=colors[7],
-                padding=3,
-                linewidth=0,
-            ),    
-            widget.Battery(
-                background=colors[7],
-                foreground=colors[5],
-                charge_char='↑',
-                discharge_char='↓',
-                font="MesloLGS NF",
-                fontsize=16,
-                update_interval=1,
-                format='{percent:2.0%} '
-            ),
-            widget.Battery(
-                foreground=colors[5],
-                background=colors[7],
-                fontsize=24,
-                low_percentage=0.2,
-                low_foreground=colors[5],
-                font="MesloLGS NF",
-                update_interval=1,
-                format='{char}',
-                charge_char='ﮣ',
-                discharge_char=' ',
-            ),
-            widget.Sep(
-                background=colors[7],
-                padding=8,
+                padding=10,
                 linewidth=0,
             ),
             widget.TextBox(
@@ -476,9 +454,43 @@ screens = [
                 padding=0,
                 fontsize=38
             ),
+            # widget.Sep(
+            #     background=colors[7],
+            #     padding=8,
+            #     linewidth=0,
+            # ),
+            # widget.TextBox(
+            #     text="\uE0B6",
+            #     fonts="MesloLGS NF",
+            #     foreground=colors[8],
+            #     background=colors[7],
+            #     padding=0,
+            #     fontsize=38
+            # ),
+            # widget.Sep(
+            #     background=colors[8],
+            #     padding=6,
+            #     linewidth=0,
+            # ),
+            widget.Volume(
+                background=colors[8],
+                foreground=colors[5],
+                font="MesloLGS NF",
+                fontsize=16,
+                mouse_callbacks={'Button3': lambda: qtile.cmd_spawn("pavucontrol")},
+                # update_interval=0.001,
+            ),
+            widget.Bluetooth(
+                background=colors[8],
+                foreground=colors[5],
+                font="MesloLGS NF",
+                fontsize=16,
+                samples=30,
+                update_interval=2,
+            ),
             widget.Sep(
                 background=colors[8],
-                padding=6,
+                padding=10,
                 linewidth=0,
             ),
             widget.Clock(
@@ -505,15 +517,11 @@ screens = [
 #############################################
 ############# AUTOSTART #####################
 #############################################
+#############################################
+
 @hook.subscribe.startup_once
-def autostart():
-    processes = [
-        ['picom'],
-    ]
-
-    for p in processes:
-        subprocess.Popen(p)
-
+def run():
+    autostart.init_apps()
 
 # Drag floating layouts.
 mouse = [
