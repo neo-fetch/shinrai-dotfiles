@@ -6,7 +6,7 @@ if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]
 fi
 
 # If you come from bash you might have to change your $PATH.
-# export PATH=$HOME/bin:/usr/local/bin:$PATH
+export PATH=$HOME/.local/bin:$PATH
 
 # Path to your oh-my-zsh installation.
 export ZSH=$HOME/.oh-my-zsh
@@ -97,7 +97,7 @@ source $ZSH/oh-my-zsh.sh
 
 # Compilation flags
 # export ARCHFLAGS="-arch x86_64"
-export PATH=/home/neo/.local/bin:$PATH
+
 # Set personal aliases, overriding those provided by oh-my-zsh libs,
 # plugins, and themes. Aliases can be placed here, though oh-my-zsh
 # users are encouraged to define aliases within the ZSH_CUSTOM folder.
@@ -106,7 +106,14 @@ export PATH=/home/neo/.local/bin:$PATH
 # Example aliases
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
+# alias u='curl https://cowsay.morecode.org/say\?message="${$(curl -sk whatthecommit.com/index.txt)// /+}"%0D%0A\&format\=text; sudo pacman -Syyuu'
+alias u='cowsay $(curl -sk whatthecommit.com/index.txt); sudo pacman -Syyuu'
+alias i='bash /home/neo/pacInstallation.sh'
+alias yi="bash /home/neo/yayinstallation.sh"
 #Set plugins(... alias-tips zsh-autosuggestions) and ZSH_THEME="powerlevel10k/powerlevel10k" somewhere below
 
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
+
+
+[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
