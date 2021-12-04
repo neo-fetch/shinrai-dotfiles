@@ -13,4 +13,4 @@ array=(`echo ${line}`)
 size=${#array[@]}
 index=$(($RANDOM % $size))
 cowsay -f "${array[$index]}" $PACK; 
-sudo pacman -S $package;
+sudo pacman -Syu $package;
