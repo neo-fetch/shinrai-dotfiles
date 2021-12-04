@@ -499,7 +499,7 @@ screens = [
                 foreground=colors[5],
                 font="2",
                 fontsize=16,
-                format='%I:%M %p',
+                format='%H:%M', # %I:%M %p',
             ),
             widget.Sep(
                 background=colors[8],
