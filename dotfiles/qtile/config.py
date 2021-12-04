@@ -260,17 +260,17 @@ layouts = [
 
 
 colors =  [
-        ["#1f202b", "#1f202b", "#1f202b"], # color 0
+        ["#7209b7", "#f72585", "#7209b7"], # color 0
         ["#485062", "#485062", "#485062"], # color 1
         ["#65bdd8", "#65bdd8", "#65bdd8"], # color 2
-        ["#bc7cf7", "#a269cf", "#bc7cf7"], # color 3
+        ["#faff00", "#f2ef32", "#faff00"], # color 3
         ["#aed1dc", "#98B7C0", "#aed1dc"], # color 4
         ["#ffffff", "#ffffff", "#ffffff"], # color 5
-        ["#bb94cc", "#AB87BB", "#bb94cc"], # color 6
-        ["#9859B3", "#8455A8", "#9859B3"], # color 7
-        ["#744B94", "#694486", "#744B94"], # color 8
-        ["#0ee9af", "#0ee9af", "#0ee9af"]] # color 9
-
+        ["#7209b7", "#560bad", "#7209b7"], # color 6
+        ["#480ca8", "#3a0ca3", "#480ca8"], # color 7
+        ["#f72585", "#ff01fb", "#f72585"], # color 8
+        ["#000300", "#171717", "#000300"], # color 9
+        ["#000300", "#171717", "#000300"]] # color 10
 
 widget_defaults = dict(
     font='novamono for Powerline',
@@ -332,15 +332,15 @@ screens = [
                 fontsize=38
             ),
             widget.TextBox(
-                text=" ",
-                foreground=colors[5],
+                text=" ",
+                foreground=colors[9],
                 background=colors[3],
                 padding=0,
                 fontsize=33
             ),
             widget.Memory(
                 background=colors[3],
-                foreground=colors[5],
+                foreground=colors[9],
                 font="MesloLGS NF bold",
                 fontsize=16,
                 measure_mem='G',
@@ -348,8 +348,8 @@ screens = [
             ),
             widget.MemoryGraph(
                 background=colors[3],
-                foreground=colors[5],
-                graph_color=colors[5],
+                foreground=colors[9],
+                graph_color=colors[9],
                 border_color=colors[3],
                 samples=30
             ),
@@ -387,29 +387,29 @@ screens = [
                 fontsize=38
             ),
             widget.TextBox(
-                text="",
-                foreground=colors[5],
+                text="",
+                foreground=colors[9],
                 background=colors[3],
-                padding=0,
+                padding=3,
                 fontsize=33
             ),
             widget.CPU(
                 background=colors[3],
-                foreground=colors[5],
+                foreground=colors[9],
                 format=' {load_percent}% |',
                 font='MesloLGS NF',
                 fontsize=16
             ),
             widget.CPUGraph(
                 background=colors[3],
-                foreground=colors[5],
-                graph_color=colors[5],
+                foreground=colors[9],
+                graph_color=colors[9],
                 border_color=colors[3],
                 samples=30
             ),
             widget.Sep(
                 background=colors[3],
-                padding=6,
+                padding=0,
                 linewidth=0,
             ),
             widget.Systray(
@@ -423,27 +423,27 @@ screens = [
                 linewidth=0,
             ),
             widget.TextBox(
-                text="\uE0B6",
+                text="",
                 fonts="MesloLGS NF",
-                foreground=colors[7],
+                foreground=colors[9],
                 background=colors[3],
-                padding=0,
+                padding=4,
                 fontsize=38
             ),
             widget.Sep(
-                background=colors[7],
+                background=colors[3],
                 padding=10,
                 linewidth=0,
             ),
             widget.NetGraph(
                 foreground=colors[5],
-                background=colors[7],
-                graph_color=colors[6],
-                border_color=colors[7],
+                background=colors[3],
+                graph_color=colors[9],
+                border_color=colors[3],
                 samples=30
             ),
             widget.Sep(
-                background=colors[7],
+                background=colors[3],
                 padding=10,
                 linewidth=0,
             ),
@@ -451,7 +451,7 @@ screens = [
                 text="\uE0B6",
                 fonts="MesloLGS NF",
                 foreground=colors[8],
-                background=colors[7],
+                background=colors[3],
                 padding=0,
                 fontsize=38
             ),
