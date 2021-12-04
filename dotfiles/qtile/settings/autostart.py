@@ -7,7 +7,7 @@ def init_apps():
     processes = [
         # Recommended
         ['picom', '--config', expanduser('~/.dotfiles/picom/picom.conf'), '-b'],
-        ['/usr/bin/setxkbmap', '-option', 'caps:swapescape'],
+        # ['/usr/bin/setxkbmap', '-option', 'caps:swapescape'],
         [
             'xautolock',
             '-time', '5',

@@ -41,6 +41,7 @@ keys = [
     Key([mod], "d", lazy.spawn("rofi -show drun")),
     Key([], "F4", lazy.spawn("dmenu_run -c -l 15 -i")),
     Key([mod, "shift"], "z", lazy.spawn("google-chrome-stable")),
+    Key([mod], "Escape", lazy.spawn("python /home/neo/.config/qtile/scripts/lock_screen.py")),
 
 
 ##################################################
