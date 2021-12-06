@@ -273,7 +273,7 @@ colors =  [
         ["#000300", "#171717", "#000300"]] # color 10
 
 widget_defaults = dict(
-    font='novamono for Powerline',
+    font='MesloLGS NF',
     fontsize=12,
     padding=3,
 )
