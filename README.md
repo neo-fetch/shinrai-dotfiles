@@ -6,6 +6,7 @@ Dotfiles of Shinrai, my laptop. This repo contains my dotfiles and configuration
 
 - Alacritty
 - Neofetch
+- Rofi
 - Qtile WM
 - ZSH
 
