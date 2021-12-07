@@ -9,7 +9,7 @@ from libqtile import layout, bar, widget, hook
 from libqtile.lazy import lazy
 from typing import List  # noqa: F401
 from settings import autostart
-os.system("xrandr --output DP-0 --primary --right-of HDMI-0") # && xwinwrap -ov -g 2560x1080+1920+0 -- mpv -wid WID /home/neo/Downloads/video.mp4 --no-osc --no-osd-bar --loop-file --player-operation-mode=cplayer --no-audio --panscan=1.0 --no-input-default-bindings &")
+os.system("xrandr --output DP-0 --primary --right-of HDMI-0; /usr/bin/dunst &") # && xwinwrap -ov -g 2560x1080+1920+0 -- mpv -wid WID /home/neo/Downloads/video.mp4 --no-osc --no-osd-bar --loop-file --player-operation-mode=cplayer --no-audio --panscan=1.0 --no-input-default-bindings &")
 
 #mod4 or mod = super key
 mod = "mod4"
