@@ -260,15 +260,15 @@ layouts = [
 
 
 colors =  [
-        ["#7209b7", "#f72585", "#7209b7"], # color 0
+        ["#45272c", "#45272c", "#45272c"], # color 0
         ["#485062", "#485062", "#485062"], # color 1
         ["#65bdd8", "#65bdd8", "#65bdd8"], # color 2
-        ["#faff00", "#f2ef32", "#faff00"], # color 3
+        ["#f8e4d7", "#f8e4d7", "#f8e4d7"], # color 3
         ["#aed1dc", "#98B7C0", "#aed1dc"], # color 4
         ["#ffffff", "#ffffff", "#ffffff"], # color 5
         ["#7209b7", "#560bad", "#7209b7"], # color 6
-        ["#480ca8", "#3a0ca3", "#480ca8"], # color 7
-        ["#f72585", "#ff01fb", "#f72585"], # color 8
+        ["#485767", "#485767", "#485767"], # color 7
+        ["#26272a", "#26272a", "#26272a"], # color 8
         ["#000300", "#171717", "#000300"], # color 9
         ["#000300", "#171717", "#000300"]] # color 10
 
@@ -366,13 +366,13 @@ screens = [
             widget.GroupBox(
                 font="MesloLGS NF",
                 fontsize=22,
-                active=colors[6],
-                inactive=colors[1],
+                active=colors[3],
+                inactive=colors[9],
                 rounded=True,
                 highlight_color=colors[0],
                 highlight_method="line",
                 this_current_screen_border=colors[0],
-                block_highlight_text_color=colors[2],
+                block_highlight_text_color=colors[3],
                 blockwidth=2,
                 margin_y=5,
             ),
