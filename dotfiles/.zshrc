@@ -113,6 +113,9 @@ alias i='bash /home/neo/pacInstallation.sh'
 alias yi="bash /home/neo/yayinstallation.sh"
 alias yu='cowsay $(curl -sk whatthecommit.com/index.txt); yay -Syyuu'
 alias lock="python .config/qtile/scripts/lock_screen.py"
+alias mntw='sudo mount /dev/nvme0n1p3 ~/mount'
+alias umntw='sudo umount /dev/nvme0n1p3'
+alias mtwchk='lsblk /dev/nvme0n1p3'
 #Set plugins(... alias-tips zsh-autosuggestions) and ZSH_THEME="powerlevel10k/powerlevel10k" somewhere below
 
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
