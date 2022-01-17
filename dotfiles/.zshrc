@@ -116,6 +116,7 @@ alias lock="python .config/qtile/scripts/lock_screen.py"
 alias mntw='sudo mount /dev/nvme0n1p3 ~/mount'
 alias umntw='sudo umount /dev/nvme0n1p3'
 alias mtwchk='lsblk /dev/nvme0n1p3'
+alias time_reset='sudo ntpd -qg'
 #Set plugins(... alias-tips zsh-autosuggestions) and ZSH_THEME="powerlevel10k/powerlevel10k" somewhere below
 
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
