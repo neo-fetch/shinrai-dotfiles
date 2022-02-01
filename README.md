@@ -1,6 +1,6 @@
 # shinrai-dotfiles
 
-Dotfiles of Shinrai, my laptop. This repo contains my dotfiles and configuration.
+Dotfiles of initially shinrai, my laptop, continued now on lee, my Desktop because I barely use my laptop anymore. This repo contains my dotfiles and configuration. I worked hard "borrowing" it from other people's blood and sweat and then I decided to pour into it my own. I need a life.
 
 ## Configs Included
 
