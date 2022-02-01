@@ -108,10 +108,12 @@ source $ZSH/oh-my-zsh.sh
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 # alias u='curl https://cowsay.morecode.org/say\?message="${$(curl -sk whatthecommit.com/index.txt)// /+}"%0D%0A\&format\=text; sudo pacman -Syyuu'
-alias u='cowsay $(curl -sk whatthecommit.com/index.txt); sudo pacman -Syyuu'
+# alias u='cowsay $(curl -sk whatthecommit.com/index.txt); sudo pacman -Syyuu'
+alias u='cowsay $(python joke.py); sudo pacman -Syyuu'
 alias i='bash /home/neo/pacInstallation.sh'
 alias yi="bash /home/neo/yayinstallation.sh"
-alias yu='cowsay $(curl -sk whatthecommit.com/index.txt); yay -Syyuu'
+# alias yu='cowsay $(curl -sk whatthecommit.com/index.txt); yay -Syyuu'
+alias yu='cowsay $(python joke.py); yay -Syyuu'
 alias lock="python .config/qtile/scripts/lock_screen.py"
 alias mntw='sudo mount /dev/nvme0n1p3 ~/mount'
 alias umntw='sudo umount /dev/nvme0n1p3'
