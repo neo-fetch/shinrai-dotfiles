@@ -39,9 +39,10 @@ def window_to_next_group(qtile):
 
 keys = [
     Key([mod], "d", lazy.spawn("rofi -modi run,drun,window -show drun -show-icons -sidebar-mode")),
-    Key([], "F4", lazy.spawn("dmenu_run -c -l 15 -i")),
+    Key([mod], "g", lazy.spawn("rofi -dmenu -p 'Search' | xargs -I{} xdg-open https://www.google.de/search\?q\=\{\}")),
     Key([mod, "shift"], "z", lazy.spawn("google-chrome-stable")),
     Key([mod], "Escape", lazy.spawn("python /home/neo/.config/qtile/scripts/lock_screen.py")),
+    Key([mod, "shift"], "Escape", lazy.spawn("poweroff")),
 
 
 ##################################################
@@ -295,7 +296,20 @@ screens = [
                 fontsize=16,
                 foreground=colors[5],
                 background=colors[8],
-                format='%d %b | %A'
+                format='%d %b | %A,'
+            ),
+            widget.Wttr(
+                lang='en',
+                background=colors[8],
+                font="MesloLGS NF",
+                fontsize=16,
+                foreground=colors[5],
+                location={
+                  '17.5186,78.3963': '',
+                },
+                format='%l: %t',
+                units='m',
+                update_interval=30,
             ),
             widget.TextBox(
                 text="\ue0b4",
@@ -354,6 +368,48 @@ screens = [
                 samples=30
             ),
             widget.TextBox(
+                text="  ",
+                foreground=colors[9],
+                background=colors[3],
+                padding=6,
+                fontsize=25
+            ),
+            widget.NvidiaSensors(
+                background=colors[3],
+                foreground=colors[9],
+                font="MesloLGS NF bold",
+                fontsize=16,
+                format='{temp}°C|'
+            ),
+            widget.TextBox(
+                text="",
+                foreground=colors[9],
+                background=colors[3],
+                padding=6,
+                fontsize=33
+            ),
+            widget.NvidiaSensors(
+                background=colors[3],
+                foreground=colors[9],
+                font="MesloLGS NF bold",
+                fontsize=16,
+                format='{fan_speed}|'
+            ),
+            widget.TextBox(
+                text="",
+                foreground=colors[9],
+                background=colors[3],
+                padding=6,
+                fontsize=33
+            ),
+            widget.NvidiaSensors(
+                background=colors[3],
+                foreground=colors[9],
+                font="MesloLGS NF bold",
+                fontsize=16,
+                format='{perf}'
+            ),            
+            widget.TextBox(
                 text="\ue0b4",
                 fonts="MesloLGS NF",
                 foreground=colors[3],
@@ -362,6 +418,11 @@ screens = [
             ),
 
             widget.Spacer(),
+            widget.Sep(
+                background=colors[0],
+                padding=315,
+                linewidth=0,
+            ),
 
             widget.GroupBox(
                 font="MesloLGS NF",
@@ -397,7 +458,7 @@ screens = [
                 background=colors[3],
                 foreground=colors[9],
                 format=' {load_percent}% |',
-                font='MesloLGS NF',
+                font='MesloLGS NF bold',
                 fontsize=16
             ),
             widget.CPUGraph(
@@ -481,14 +542,14 @@ screens = [
                 mouse_callbacks={'Button3': lambda: qtile.cmd_spawn("pavucontrol")},
                 # update_interval=0.001,
             ),
-            widget.Bluetooth(
-                background=colors[8],
-                foreground=colors[5],
-                font="MesloLGS NF",
-                fontsize=16,
-                samples=30,
-                update_interval=2,
-            ),
+            # widget.Bluetooth(
+            #     background=colors[8],
+            #     foreground=colors[5],
+            #     font="MesloLGS NF",
+            #     fontsize=16,
+            #     samples=30,
+            #     update_interval=2,
+            # ),
             widget.Sep(
                 background=colors[8],
                 padding=10,
