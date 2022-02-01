@@ -426,11 +426,11 @@ screens = [
 
             widget.GroupBox(
                 font="MesloLGS NF",
-                fontsize=22,
+                fontsize=45,
                 active=colors[3],
                 inactive=colors[9],
                 rounded=True,
-                highlight_color=colors[0],
+                highlight_color=colors[3],
                 highlight_method="line",
                 this_current_screen_border=colors[0],
                 block_highlight_text_color=colors[3],
