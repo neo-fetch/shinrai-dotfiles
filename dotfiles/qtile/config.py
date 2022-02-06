@@ -55,8 +55,8 @@ keys = [
     # Key([], "XF86AudioRaiseVolume", lazy.spawn("amixer -q set Master 5%+")),
 
     Key([], "XF86AudioMute", lazy.spawn("pamixer -t")),
-    Key([], "XF86AudioLowerVolume", lazy.spawn("pamixer -d 5")),
-    Key([], "XF86AudioRaiseVolume", lazy.spawn("pamixer -i 5")),
+    Key([], "XF86AudioLowerVolume", lazy.spawn("pamixer -d 1")),
+    Key([], "XF86AudioRaiseVolume", lazy.spawn("pamixer -i 1")),
 
     Key([], "XF86AudioPlay", lazy.spawn("playerctl play-pause")),
     Key([], "XF86AudioNext", lazy.spawn("playerctl next")),
@@ -288,24 +288,11 @@ screens = [
         [
             widget.TextBox(
                 text="\ue0b6",
-                fonts="droid sans mono for powerline",
+                fonts="MesloLGS NF",
                 foreground=colors[8],
                 background=colors[10],
                 padding=0,
-                fontsize=38
-            ),
-            widget.TextBox(
-                text="",
-                fonts="novamono for powerline bold",
-                foreground=colors[5],
-                background=colors[8],
-                padding=0,
-                fontsize=28
-            ),
-            widget.Sep(
-                background=colors[8],
-                padding=15,
-                linewidth=0,
+                fontsize=33
             ),
             widget.Clock(
                 font="MesloLGS NF",
@@ -329,19 +316,19 @@ screens = [
             ),
             widget.TextBox(
                 text="\ue0b4",
-                fonts="droid sans mono for powerline",
+                fonts="MesloLGS NF",
                 foreground=colors[8],
                 background=colors[10],
                 padding=0,
-                fontsize=38
+                fontsize=33
             ),
             widget.TextBox(
                 text="\ue0b6",
-                fonts="droid sans mono for powerline",
+                fonts="MesloLGS NF",
                 foreground=colors[0],
                 background=colors[10],
                 padding=0,
-                fontsize=38
+                fontsize=33
             ),
 
             # widget.TextBox(
@@ -376,7 +363,7 @@ screens = [
                 foreground=colors[0],
                 background=colors[3],
                 padding=0,
-                fontsize=38
+                fontsize=13
             ),
             widget.TextBox(
                 text=" ",
@@ -447,7 +434,7 @@ screens = [
                 fonts="MesloLGS NF",
                 foreground=colors[3],
                 padding=0,
-                fontsize=38
+                fontsize=33
             ),
 
             widget.Sep(
@@ -457,9 +444,10 @@ screens = [
             ),
             
             widget.Spacer(),
+
             widget.GroupBox(
                 font="MesloLGS NF",
-                fontsize=45,
+                fontsize=33,
                 active=colors[0],
                 inactive=colors[8],
                 rounded=True,
@@ -468,10 +456,9 @@ screens = [
                 this_current_screen_border=colors[3],
                 block_highlight_text_color=colors[9],
                 blockwidth=2,
-                margin_y=5,
+                margin_y=4,
                 background=colors[9],
             ),
-            
             widget.Spacer(),
 
             widget.TextBox(
@@ -479,7 +466,7 @@ screens = [
                 fonts="MesloLGS NF",
                 foreground=colors[3],
                 padding=0,
-                fontsize=38
+                fontsize=33
             ),
             widget.TextBox(
                 text="",
@@ -523,7 +510,7 @@ screens = [
                 foreground=colors[9],
                 background=colors[3],
                 padding=4,
-                fontsize=38
+                fontsize=33
             ),
             widget.Sep(
                 background=colors[3],
@@ -548,7 +535,7 @@ screens = [
                 foreground=colors[8],
                 background=colors[3],
                 padding=0,
-                fontsize=38
+                fontsize=13
             ),
             # widget.Sep(
             #     background=colors[7],
@@ -561,20 +548,30 @@ screens = [
             #     foreground=colors[8],
             #     background=colors[7],
             #     padding=0,
-            #     fontsize=38
+            #     fontsize=33
             # ),
             # widget.Sep(
             #     background=colors[8],
             #     padding=6,
             #     linewidth=0,
             # ),
-            widget.Volume(
+            # Icon for volume
+            widget.TextBox(
+                text="",
+                fonts="MesloLGS NF",
+                foreground=colors[5],
+                background=colors[8],
+                padding=4,
+                fontsize=33
+            ),
+            widget.PulseVolume(
                 background=colors[8],
                 foreground=colors[5],
                 font="MesloLGS NF",
                 fontsize=16,
+                limit_max_volume = False,
                 mouse_callbacks={'Button3': lambda: qtile.cmd_spawn("pavucontrol")},
-                # update_interval=0.001,
+                update_interval=0.01,
             ),
             # widget.Bluetooth(
             #     background=colors[8],
@@ -598,14 +595,14 @@ screens = [
             ),
             widget.TextBox(
                 text="\ue0b4",
-                fonts="droid sans mono for powerline",
+                fonts="MesloLGS NF",
                 foreground=colors[8],
                 background=colors[10],
                 padding=0,
-                fontsize=38
+                fontsize=33
             ),
         ],
-            44,
+            33,
             background=colors[10],
             margin=[4,4,0,4],
             opacity=0.89,
