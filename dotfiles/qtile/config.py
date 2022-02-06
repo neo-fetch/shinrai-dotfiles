@@ -271,7 +271,7 @@ colors =  [
         ["#485767", "#485767", "#485767"], # color 7
         ["#26272a", "#26272a", "#26272a"], # color 8
         ["#000300", "#171717", "#000300"], # color 9
-        ["#000300", "#171717", "#000300"]] # color 10
+        ["#00000000", "#00000000", "#00000000"]] # color 10
 
 widget_defaults = dict(
     font='MesloLGS NF',
@@ -286,6 +286,22 @@ screens = [
         #wallpaper_mode='fill',
         top=bar.Bar(
         [
+            widget.TextBox(
+                text="\ue0b6",
+                fonts="droid sans mono for powerline",
+                foreground=colors[8],
+                background=colors[10],
+                padding=0,
+                fontsize=38
+            ),
+            widget.TextBox(
+                text="",
+                fonts="novamono for powerline bold",
+                foreground=colors[5],
+                background=colors[8],
+                padding=0,
+                fontsize=28
+            ),
             widget.Sep(
                 background=colors[8],
                 padding=15,
@@ -313,19 +329,36 @@ screens = [
             ),
             widget.TextBox(
                 text="\ue0b4",
-                fonts="MesloLGS NF",
+                fonts="droid sans mono for powerline",
                 foreground=colors[8],
-                background=colors[7],
+                background=colors[10],
                 padding=0,
                 fontsize=38
             ),
-            widget.Sep(
-                background=colors[7],
-                padding=12,
-                linewidth=0,
+            widget.TextBox(
+                text="\ue0b6",
+                fonts="droid sans mono for powerline",
+                foreground=colors[0],
+                background=colors[10],
+                padding=0,
+                fontsize=38
             ),
+
+            # widget.TextBox(
+            #     text="\ue0b4",
+            #     fonts="MesloLGS NF",
+            #     foreground=colors[8],
+            #     background=colors[0],
+            #     padding=0,
+            #     fontsize=38
+            # ),
+            # widget.Sep(
+            #     background=colors[0],
+            #     padding=12,
+            #     linewidth=0,
+            # ),
             widget.CurrentLayout(
-                background=colors[7],
+                background=colors[0],
                 foreground=colors[5],
                 font="MesloLGS NF",
                 fontsize=15,
@@ -333,14 +366,14 @@ screens = [
             widget.CurrentLayoutIcon(
                 custom_icon_paths=[os.path.expanduser("~/.config/qtile/icons")],
                 foreground=colors[1],
-                background=colors[7],
+                background=colors[0],
                 padding=0,
                 scale=0.5
             ),
             widget.TextBox(
                 text="\ue0b4",
                 fonts="MesloLGS NF",
-                foreground=colors[7],
+                foreground=colors[0],
                 background=colors[3],
                 padding=0,
                 fontsize=38
@@ -368,7 +401,7 @@ screens = [
                 samples=30
             ),
             widget.TextBox(
-                text="  ",
+                text="",
                 foreground=colors[9],
                 background=colors[3],
                 padding=6,
@@ -417,25 +450,26 @@ screens = [
                 fontsize=38
             ),
 
-            widget.Spacer(),
             widget.Sep(
-                background=colors[0],
+                #background=colors[0],
                 padding=315,
                 linewidth=0,
             ),
-
+            
+            widget.Spacer(),
             widget.GroupBox(
                 font="MesloLGS NF",
                 fontsize=45,
-                active=colors[3],
-                inactive=colors[9],
+                active=colors[0],
+                inactive=colors[8],
                 rounded=True,
                 highlight_color=colors[3],
                 highlight_method="line",
-                this_current_screen_border=colors[0],
-                block_highlight_text_color=colors[3],
+                this_current_screen_border=colors[3],
+                block_highlight_text_color=colors[9],
                 blockwidth=2,
                 margin_y=5,
+                background=colors[9],
             ),
             
             widget.Spacer(),
@@ -562,18 +596,22 @@ screens = [
                 fontsize=16,
                 format='%H:%M', # %I:%M %p',
             ),
-            widget.Sep(
-                background=colors[8],
-                padding=10,
-                linewidth=0,
+            widget.TextBox(
+                text="\ue0b4",
+                fonts="droid sans mono for powerline",
+                foreground=colors[8],
+                background=colors[10],
+                padding=0,
+                fontsize=38
             ),
         ],
             44,
-            background=colors[0],
+            background=colors[10],
             margin=[4,4,0,4],
-            opacity=0.79,
+            opacity=0.89,
         ),
     ),
+    
 ]
 #############################################
 #############################################
