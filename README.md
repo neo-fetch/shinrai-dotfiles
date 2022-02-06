@@ -13,7 +13,7 @@ Dotfiles of initially shinrai, my laptop, continued now on lee, my Desktop becau
 
 ## Screenshots
 
-![A stunnin scrot of my primary desktop](https://raw.githubusercontent.com/neo-fetch/shinrai-dotfiles/master/Screenshots/Screenshot_20211208_010205.png)
+![A stunnin scrot of my primary desktop](https://i.imgur.com/3aEv7tt.png)
 
 ## Credits
 
