@@ -553,7 +553,7 @@ screens = [
             # widget.Sep(
             #     background=colors[8],
             #     padding=6,
-            #     linewidth=0,
+            #     linewidth=0,o
             # ),
             # Icon for volume
             widget.TextBox(
