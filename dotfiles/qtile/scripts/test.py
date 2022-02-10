@@ -51,5 +51,5 @@ overlay = Image.open("/tmp/joke.png")
 background = background.convert("RGBA")
 overlay = overlay.convert("RGBA")
 
-new_img = Image.blend(background, overlay, 0.5)
+new_img = Image.blend(background, overlay, 0.2)
 new_img.save("/tmp/screen.png","PNG")
