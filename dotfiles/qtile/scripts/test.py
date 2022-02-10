@@ -5,6 +5,7 @@ import sys
 import requests
 import pandas as pd
 from PIL import Image, ImageDraw, ImageFont
+
 def get_joke():
     url = "https://icanhazdadjoke.com/"
     headers = {"Accept": "application/json"}
@@ -15,6 +16,10 @@ def get_joke():
         print("Something went wrong: {}".format(response.status_code))
         sys.exit()
 
+# First script attempts to get the joke from ProgrammerDadJokes subreddit.
+# If that fails, it will get the joke from the next best source: icanhazdadjoke.com
+# I was too lazy to get the joke from the reddit API, so I just grabbed the joke from the website.
+# The downside is that reddit does not always respond with json, so to avoid errors, we have a backup site.
 
 try:
     jsondata = requests.get('https://www.reddit.com/r/ProgrammerDadJokes.json').json()
