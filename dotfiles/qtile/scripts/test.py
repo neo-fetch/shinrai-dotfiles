@@ -51,5 +51,6 @@ overlay = Image.open("/tmp/joke.png")
 background = background.convert("RGBA")
 overlay = overlay.convert("RGBA")
 
-new_img = Image.blend(background, overlay, 0.2)
+# 0.2 is the degree of merging of overlay with background. 0.0 is completely transparent, 1.0 is completely opaque.
+new_img = Image.blend(background, overlay, 0.2) 
 new_img.save("/tmp/screen.png","PNG")
