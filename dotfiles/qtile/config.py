@@ -9,7 +9,7 @@ from libqtile import layout, bar, widget, hook
 from libqtile.lazy import lazy
 from typing import List  # noqa: F401
 from settings import autostart
-os.system("xrandr --output DP-0 --primary --right-of HDMI-0; /usr/bin/dunst &") # && xwinwrap -ov -g 2560x1080+1920+0 -- mpv -wid WID /home/neo/Downloads/video.mp4 --no-osc --no-osd-bar --loop-file --player-operation-mode=cplayer --no-audio --panscan=1.0 --no-input-default-bindings &")
+os.system("xrandr --output DP-0 --primary --right-of HDMI-0; /usr/bin/dunst &") # && xwinwrap -ov -g 2560x1080+1920+0 -- mpv -wid WID /home/neo/Downloads/video.mp4 --no-osc --no-osd-bar --loop-file --player-operation-mode=cplayer --no-audio --panscan=1.0 --no-input-default-bindings &") mpv gameboy.wav --volume=50 --audio-device='alsa/hdmi:CARD=NVidia,DEV=1'
 
 #mod4 or mod = super key
 mod = "mod4"
@@ -38,7 +38,7 @@ def window_to_next_group(qtile):
 
 
 keys = [
-    Key([mod], "d", lazy.spawn("rofi -modi run,drun,window -show drun -show-icons -sidebar-mode")),
+    Key([mod], "d", lazy.spawn("/home/neo/.config/rofi/bin/launcher_text")),
     Key([mod], "g", lazy.spawn("rofi -dmenu -p 'Search' | xargs -I{} xdg-open https://www.google.de/search\?q\=\{\}")),
     Key([mod, "shift"], "z", lazy.spawn("google-chrome-stable")),
     Key([mod], "Escape", lazy.spawn("python /home/neo/.config/qtile/scripts/lock_screen.py")),
@@ -157,7 +157,7 @@ keys = [
     Key([mod], "KP_Enter", lazy.spawn(myTerm)),
     Key([mod], "v", lazy.spawn("pavucontrol")),
     Key([], "F9", lazy.spawn("pavucontrol")),
-    Key([mod], "e", lazy.spawn("emacs")),
+    Key([mod], "e", lazy.spawn("/home/neo/.config/rofi/bin/powermenu")),
 
     
     KeyChord([mod], "i",[
@@ -308,7 +308,7 @@ screens = [
                 fontsize=16,
                 foreground=colors[5],
                 location={
-                  '17.5186,78.3963': '',
+                #   '17.5186,78.3963': '',
                 },
                 format='%l: %t',
                 units='m',
