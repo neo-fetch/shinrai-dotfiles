@@ -1,5 +1,12 @@
-/* RASI Theme */
+/* RASI Theme 
+/** Basic config file **/
 
+configuration {
+  show-icons:         true;
+  icon-theme:         "Papirus";
+}
+
+*/
     
 * {
 	background:                      #000300aa;
