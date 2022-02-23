@@ -6,7 +6,7 @@ Dotfiles of initially shinrai, my laptop, continued now on lee, my Desktop becau
 
 - Alacritty
 - Neofetch
-- Dunst # Needs more work but it's a good start
+- Dunst 
 - Rofi
 - Qtile WM
 - ZSH
