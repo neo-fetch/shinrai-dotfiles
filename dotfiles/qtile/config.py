@@ -308,7 +308,7 @@ screens = [
                 fontsize=16,
                 foreground=colors[5],
                 location={
-                #   '17.5186,78.3963': '',
+                   '17.5186,78.3963': '',
                 },
                 format='%l: %t',
                 units='m',
@@ -437,11 +437,11 @@ screens = [
                 fontsize=33
             ),
 
-            widget.Sep(
-                #background=colors[0],
-                padding=315,
-                linewidth=0,
-            ),
+            # widget.Sep(
+            #     #background=colors[0],
+            #     padding=315,
+            #     linewidth=0,
+            # ),
             
             widget.Spacer(),
 
@@ -555,7 +555,26 @@ screens = [
             #     padding=6,
             #     linewidth=0,o
             # ),
-            # Icon for volume
+            # Icon for pause/play
+            widget.TextBox(
+                text="", 
+                fonts="MesloLGS NF",
+                foreground=colors[5],
+                background=colors[8],
+                padding=4,
+                mouse_callbacks={'Button3': lambda: qtile.cmd_spawn("spotify")},
+                fontsize=30
+            ),
+            widget.Mpris2(
+                name='spotify',
+                foreground=colors[5],
+                background=colors[8],
+                objname="org.mpris.MediaPlayer2.spotify",
+                thumbnail = 'xesam:url',
+                display_metadata=['xesam:title', 'xesam:artist'],
+                scroll_chars=None,
+                stop_pause_text='',
+            ),
             widget.TextBox(
                 text="",
                 fonts="MesloLGS NF",
