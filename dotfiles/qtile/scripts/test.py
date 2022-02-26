@@ -38,7 +38,7 @@ except:
     
     fnt = ImageFont.truetype('/usr/share/fonts/noto/NotoSansMono-Bold.ttf', 15)
     d = ImageDraw.Draw(img)
-    d.text(((width)/2,height/2), get_joke()["joke"], font=fnt, fill=(248, 228, 215))
+    d.text(((width)/3,height/2), get_joke()["joke"], font=fnt, fill=(248, 228, 215))
 
     img.save('/tmp/joke.png')
 
