@@ -2,7 +2,7 @@
 import random
 import re
 import sys
-from turtle import width
+# from turtle import width
 import requests
 import pandas as pd
 from PIL import Image, ImageDraw, ImageFont
@@ -28,17 +28,19 @@ try:
     
     img = Image.new('RGB', (width, height), color = (69, 39, 44))
     
-    fnt = ImageFont.truetype('/usr/share/fonts/noto/NotoSansMono-Bold.ttf', 15)
+    fnt = ImageFont.truetype('/usr/share/fonts/liberation/LiberationMono-Bold.ttf', 17)
     d = ImageDraw.Draw(img)
-    d.text((960,405), f"{i['data']['title']}\n{re.sub('&amp;#x200B;', '', i['data']['selftext'])}", font=fnt, fill=(248, 228, 215))
+    punchline = re.sub('&amp;#x200B;', '', i['data']['selftext'])
+    d.text((((width-len(punchline)*10)/2),height/2), f"{i['data']['title']}\n{punchline}", font=fnt, fill=(248, 228, 215))
 
     img.save('/tmp/joke.png')
 except:
     img = Image.new('RGB', (width, height), color = (69, 39, 44))
     
-    fnt = ImageFont.truetype('/usr/share/fonts/noto/NotoSansMono-Bold.ttf', 15)
+    fnt = ImageFont.truetype('/usr/share/fonts/liberation/LiberationMono-Bold.ttf', 17)
     d = ImageDraw.Draw(img)
-    d.text(((width)/3,height/2), get_joke()["joke"], font=fnt, fill=(248, 228, 215))
+    joke = get_joke()["joke"]
+    d.text((((width - len(joke)*10)/2),height/2), joke, font=fnt, fill=(248, 228, 215))
 
     img.save('/tmp/joke.png')
 
