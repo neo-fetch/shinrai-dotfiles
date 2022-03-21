@@ -14,8 +14,8 @@ Dotfiles of initially shinrai, my laptop, continued now on lee, my Desktop becau
 ## Screenshots
 
 - Desktop
-![A stunnin scrot of my primary desktop](https://i.imgur.com/O9B6hBq.png)
-![A stunnin scrot of my secondary desktop](https://i.imgur.com/zPnpvDi.jpg)
+![A stunnin scrot of my secondary desktop](https://i.imgur.com/BBspW59.jpg)
+![A stunnin scrot of my secondary desktop](https://i.imgur.com/43FrrxI.jpg)
 ![A stunnin scrot of my primary desktop](https://i.imgur.com/kd72n1D.jpg)
 ![A stunnin scrot of my primary desktop](https://i.imgur.com/9qXrVbT.png)
 ![A stunnin scrot of my primary desktop](https://i.imgur.com/otwSauS.png)
