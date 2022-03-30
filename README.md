@@ -31,3 +31,11 @@ Dotfiles of initially shinrai, my laptop, continued now on lee, my Desktop becau
 
 - [biscuitrescue](https://github.com/biscuitrescue/qtile-gentoo)
 - [trev-dev](https://github.com/trev-dev/dotfiles)
+
+## Wallpaper
+
+- Original Wallpaper
+![A stunning wallpaper of my primary desktop](https://images.hdqwalls.com/download/sound-waves-abstract-art-4k-yu-2560x1080.jpg)
+
+- Modified Wallpaper (using [krita](https://krita.org/))
+![A stunning wallpaper of my primary desktop](https://i.imgur.com/bha5Ja8.jpeg)
