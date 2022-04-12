@@ -143,6 +143,13 @@ keys = [
     Key([mod], "Print", lazy.spawn("flameshot gui -p ~/Pictures/Screenshots/")),
     Key([], "Print", lazy.spawn("flameshot gui")),
 
+
+    Key([mod, "control"], "Left", lazy.screen.prev_group()),
+
+    Key([mod, "control"], "Right", lazy.screen.next_group()),
+
+
+
 #####################3#########################
 ############## APPLICATIONS ###################
 ###############################################
