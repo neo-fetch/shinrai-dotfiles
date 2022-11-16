@@ -1,11 +1,11 @@
 # Revival of the project:
 After graduation, most of my time went into adjusting to the new city. As my original desktop remained back at home, with my old laptop dead, and my job commitments, My activities were reduced to simple commandline use. As things have started settling, I have decided to go back to my hobby projects, this being one of them. I have started working on it again, and will be updating it as I go along. I will be updating the README.md file as I go along, so that it is easier for people to understand the project.
 
-# About the project:
+# About the project ():
 
 ## shinrai-dotfiles
 
-Dotfiles of initially shinrai, my laptop, which was continued now on lee, my Desktop because I barely used my laptop anymore, which will now be continued on my new laptop, which I have not yet decided on a name for (How does "aeon" sound?). This repo contains my dotfiles and configuration. I worked hard "borrowing" it from other people's blood and sweat and then I decided to pour into it my own. I need a life.
+THE DUMPSTERFIRE BRANCH: Dotfiles of initially shinrai, my laptop, which was continued now on lee, my Desktop because I barely used my laptop anymore, which will now be continued on my new laptop, which I have not yet decided on a name for (How does "aeon" sound?). This repo contains my dotfiles and configuration. I worked hard "borrowing" it from other people's blood and sweat and then I decided to pour into it my own. I need a life.
 
 ## Configs Included
 
