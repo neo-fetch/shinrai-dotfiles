@@ -7,14 +7,14 @@ After graduation, most of my time went into adjusting to the new city. As my ori
 
 Dotfiles of initially shinrai, my laptop, which was continued now on lee, my Desktop because I barely used my laptop anymore, which will now be continued on my new laptop, which I have not yet decided on a name for (How does "aeon" sound?). This repo contains my dotfiles and configuration. I worked hard "borrowing" it from other people's blood and sweat and then I decided to pour into it my own. I need a life.
 
-## Configs Included
+## Configs Included (Or to be included)
 
 - Alacritty
 - Neofetch
 - Dunst 
 - Rofi
-- Qtile WM/ (BSPWM too I guess?)
-- Hyperland compositor
+- Qtile WM/ (BSPWM too I guess? (TBI. Currently ricing on aeon.))
+- Hyperland compositor (TBI because wayland works better on aeon, but this wont be included for a long time as I only ssh into lee these days)
 - ZSH
 
 ## Screenshots
