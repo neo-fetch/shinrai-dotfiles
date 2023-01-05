@@ -15,7 +15,7 @@ theme="style_2"
 dir="$HOME/.config/rofi/launchers/text"
 styles=($(ls -p --hide="colors.rasi" $dir/styles))
 # color="${styles[$(( $RANDOM % 10 ))]}"
-color="black.rasi"
+color="blur.rasi"
 
 # comment this line to disable random colors
 sed -i -e "s/@import .*/@import \"$color\"/g" $dir/styles/colors.rasi
@@ -27,4 +27,4 @@ sed -i -e "s/@import .*/@import \"$color\"/g" $dir/styles/colors.rasi
 # rofi -no-lazy-grab -show-icons -show drun \
 # -modi run,drun,window \
 # -theme $dir/"$theme"
-rofi -no-lazy-grab -modi run,drun,window -show drun -show-icons -sidebar-mode -theme $dir/"$theme" -font  "MesloLGS NF 11" # "Noto Sans Mono Bold 11"
+rofi -no-lazy-grab -modi run,drun,window -show drun -show-icons -sidebar-mode -theme $dir/"$theme" -font  "Montserrat 10"

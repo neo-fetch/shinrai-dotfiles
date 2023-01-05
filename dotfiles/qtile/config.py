@@ -10,7 +10,6 @@ from libqtile.lazy import lazy
 from typing import List  # noqa: F401
 from settings import autostart
 os.system("xrandr --output DP-0 --primary --right-of HDMI-0; /usr/bin/dunst &") # && xwinwrap -ov -g 2560x1080+1920+0 -- mpv -wid WID /home/neo/Downloads/video.mp4 --no-osc --no-osd-bar --loop-file --player-operation-mode=cplayer --no-audio --panscan=1.0 --no-input-default-bindings &") mpv gameboy.wav --volume=50 --audio-device='alsa/hdmi:CARD=NVidia,DEV=1'
-
 #mod4 or mod = super key
 mod = "mod4"
 mod1 = "mod1"
@@ -268,20 +267,20 @@ layouts = [
 
 
 colors =  [
-        ["#45272c", "#45272c", "#45272c"], # color 0
+        ["#8e8e95ff", "#8e8e95ff", "#8e8e95ff"], # color 0
         ["#485062", "#485062", "#485062"], # color 1
         ["#65bdd8", "#65bdd8", "#65bdd8"], # color 2
-        ["#f8e4d7", "#f8e4d7", "#f8e4d7"], # color 3
+        ["#c7c7ce", "#c7c7ce", "#c7c7ce"], # color 3
         ["#aed1dc", "#98B7C0", "#aed1dc"], # color 4
         ["#ffffff", "#ffffff", "#ffffff"], # color 5
         ["#7209b7", "#560bad", "#7209b7"], # color 6
         ["#485767", "#485767", "#485767"], # color 7
         ["#26272a", "#26272a", "#26272a"], # color 8
-        ["#000300", "#171717", "#000300"], # color 9
+        ["#000300", "#000300", "#000300"], # color 9
         ["#00000000", "#00000000", "#00000000"]] # color 10
 
 widget_defaults = dict(
-    font='MesloLGS NF',
+    font='Montserrat',
     fontsize=12,
     padding=3,
 )
@@ -295,14 +294,14 @@ screens = [
         [
             widget.TextBox(
                 text="\ue0b6",
-                fonts="MesloLGS NF",
+                fonts="Montserrat Medium",
                 foreground=colors[8],
                 background=colors[10],
                 padding=0,
                 fontsize=33
             ),
             widget.Clock(
-                font="MesloLGS NF",
+                font="Montserrat Medium",
                 fontsize=16,
                 foreground=colors[5],
                 background=colors[8],
@@ -315,15 +314,15 @@ screens = [
                 fontsize=16,
                 foreground=colors[5],
                 location={
-                   '17.5186,78.3963': '',
+                   'hyderabad': '',
                 },
-                format='%l: %t',
+                format='%l: %t %c %p',
                 units='m',
                 update_interval=30,
             ),
             widget.TextBox(
                 text="\ue0b4",
-                fonts="MesloLGS NF",
+                fonts="Montserrat Medium",
                 foreground=colors[8],
                 background=colors[10],
                 padding=0,
@@ -331,7 +330,7 @@ screens = [
             ),
             widget.TextBox(
                 text="\ue0b6",
-                fonts="MesloLGS NF",
+                fonts="Montserrat Medium",
                 foreground=colors[0],
                 background=colors[10],
                 padding=0,
@@ -340,7 +339,7 @@ screens = [
 
             # widget.TextBox(
             #     text="\ue0b4",
-            #     fonts="MesloLGS NF",
+            #     fonts="Montserrat",
             #     foreground=colors[8],
             #     background=colors[0],
             #     padding=0,
@@ -353,9 +352,9 @@ screens = [
             # ),
             widget.CurrentLayout(
                 background=colors[0],
-                foreground=colors[5],
-                font="MesloLGS NF",
-                fontsize=15,
+                foreground=colors[3],
+                font="Montserrat Medium",
+                fontsize=20,
             ),
             widget.CurrentLayoutIcon(
                 custom_icon_paths=[os.path.expanduser("~/.config/qtile/icons")],
@@ -366,7 +365,7 @@ screens = [
             ),
             widget.TextBox(
                 text="\ue0b4",
-                fonts="MesloLGS NF",
+                fonts="Montserrat",
                 foreground=colors[0],
                 background=colors[3],
                 padding=0,
@@ -382,15 +381,15 @@ screens = [
             widget.Memory(
                 background=colors[3],
                 foreground=colors[9],
-                font="MesloLGS NF bold",
+                font="Montserrat Medium",
                 fontsize=16,
                 measure_mem='G',
                 format='{MemUsed: .2f} GB',
             ),
             widget.MemoryGraph(
                 background=colors[3],
-                foreground=colors[9],
-                graph_color=colors[9],
+                foreground=colors[0],
+                graph_color=colors[0],
                 border_color=colors[3],
                 samples=30
             ),
@@ -404,7 +403,7 @@ screens = [
             widget.NvidiaSensors(
                 background=colors[3],
                 foreground=colors[9],
-                font="MesloLGS NF bold",
+                font="Montserrat Medium",
                 fontsize=16,
                 format='{temp}°C|'
             ),
@@ -418,7 +417,7 @@ screens = [
             widget.NvidiaSensors(
                 background=colors[3],
                 foreground=colors[9],
-                font="MesloLGS NF bold",
+                font="Montserrat Medium",
                 fontsize=16,
                 format='{fan_speed}|'
             ),
@@ -432,13 +431,13 @@ screens = [
             widget.NvidiaSensors(
                 background=colors[3],
                 foreground=colors[9],
-                font="MesloLGS NF bold",
+                font="Montserrat Medium",
                 fontsize=16,
                 format='{perf}'
             ),            
             widget.TextBox(
                 text="\ue0b4",
-                fonts="MesloLGS NF",
+                fonts="Montserrat",
                 foreground=colors[3],
                 padding=0,
                 fontsize=33
@@ -453,7 +452,7 @@ screens = [
             widget.Spacer(),
 
             widget.GroupBox(
-                font="MesloLGS NF",
+                font="Montserrat",
                 fontsize=33,
                 active=colors[0],
                 inactive=colors[8],
@@ -464,20 +463,20 @@ screens = [
                 block_highlight_text_color=colors[9],
                 blockwidth=2,
                 margin_y=4,
-                background=colors[9],
+                background=colors[0],
             ),
             widget.Spacer(),
 
             widget.TextBox(
                 text="\uE0B6",
-                fonts="MesloLGS NF",
+                fonts="Montserrat",
                 foreground=colors[3],
                 padding=0,
                 fontsize=33
             ),
             widget.TextBox(
                 text="",
-                foreground=colors[9],
+                foreground=colors[0],
                 background=colors[3],
                 padding=3,
                 fontsize=33
@@ -486,61 +485,69 @@ screens = [
                 background=colors[3],
                 foreground=colors[9],
                 format=' {load_percent}% |',
-                font='MesloLGS NF bold',
+                font='Montserrat Medium',
                 fontsize=16
             ),
             widget.CPUGraph(
                 background=colors[3],
-                foreground=colors[9],
-                graph_color=colors[9],
+                foreground=colors[5],
+                graph_color=colors[0],
                 border_color=colors[3],
                 samples=30
             ),
             widget.Sep(
-                background=colors[3],
+                background=colors[0],
                 padding=0,
                 linewidth=0,
             ),
-            widget.Systray(
+            widget.TextBox(
+                text="\uE0B6",
+                fonts="Montserrat",
+                foreground=colors[0],
                 background=colors[3],
+                padding=0,
+                fontsize=13
+            ),
+            widget.Systray(
+                background=colors[0],
                 icons_size=20,
                 padding=4,
             ),
             widget.Sep(
-                background=colors[3],
+                background=colors[0],
                 padding=10,
                 linewidth=0,
             ),
             widget.TextBox(
                 text="",
-                fonts="MesloLGS NF",
-                foreground=colors[9],
-                background=colors[3],
+                fonts="Montserrat",
+                foreground=colors[3],
+                background=colors[0],
                 padding=4,
                 fontsize=33
             ),
             widget.Sep(
-                background=colors[3],
+                background=colors[0],
                 padding=10,
                 linewidth=0,
             ),
             widget.NetGraph(
                 foreground=colors[5],
-                background=colors[3],
-                graph_color=colors[9],
-                border_color=colors[3],
+                background=colors[0],
+                graph_color=colors[3],
+                border_color=colors[0],
                 samples=30
             ),
             widget.Sep(
-                background=colors[3],
+                background=colors[0],
                 padding=10,
                 linewidth=0,
             ),
             widget.TextBox(
                 text="\uE0B6",
-                fonts="MesloLGS NF",
+                fonts="Montserrat",
                 foreground=colors[8],
-                background=colors[3],
+                background=colors[0 ],
                 padding=0,
                 fontsize=13
             ),
@@ -551,7 +558,7 @@ screens = [
             # ),
             # widget.TextBox(
             #     text="\uE0B6",
-            #     fonts="MesloLGS NF",
+            #     fonts="Montserrat",
             #     foreground=colors[8],
             #     background=colors[7],
             #     padding=0,
@@ -565,7 +572,7 @@ screens = [
             # Icon for pause/play
             widget.TextBox(
                 text="", 
-                fonts="MesloLGS NF",
+                fonts="Montserrat",
                 foreground=colors[5],
                 background=colors[8],
                 padding=4,
@@ -574,6 +581,8 @@ screens = [
             ),
             widget.Mpris2(
                 name='spotify',
+                fonts="Montserrat Medium",
+                fontsize=15,
                 foreground=colors[5],
                 background=colors[8],
                 objname="org.mpris.MediaPlayer2.spotify",
@@ -584,7 +593,7 @@ screens = [
             ),
             widget.TextBox(
                 text="",
-                fonts="MesloLGS NF",
+                fonts="Montserrat",
                 foreground=colors[5],
                 background=colors[8],
                 padding=4,
@@ -593,7 +602,7 @@ screens = [
             widget.PulseVolume(
                 background=colors[8],
                 foreground=colors[5],
-                font="MesloLGS NF",
+                font="Montserrat Medium",
                 fontsize=16,
                 limit_max_volume = False,
                 mouse_callbacks={'Button3': lambda: qtile.cmd_spawn("pavucontrol")},
@@ -602,7 +611,7 @@ screens = [
             # widget.Bluetooth(
             #     background=colors[8],
             #     foreground=colors[5],
-            #     font="MesloLGS NF",
+            #     font="Montserrat",
             #     fontsize=16,
             #     samples=30,
             #     update_interval=2,
@@ -615,13 +624,13 @@ screens = [
             widget.Clock(
                 background=colors[8],
                 foreground=colors[5],
-                font="2",
+                font="Montserrat Medium",
                 fontsize=16,
                 format='%H:%M', # %I:%M %p',
             ),
             widget.TextBox(
                 text="\ue0b4",
-                fonts="MesloLGS NF",
+                fonts="Montserrat", # 
                 foreground=colors[8],
                 background=colors[10],
                 padding=0,
@@ -674,6 +683,7 @@ floating_layout = layout.Floating(
 auto_fullscreen = True
 focus_on_window_activation = "smart"
 reconfigure_screens = True
+os.system("sleep 1; mpv gameboy.wav --volume=50 --audio-device='alsa/hdmi:CARD=NVidia,DEV=1' &")
 
 # If things like steam games want to auto-minimize themselves when losing
 # focus, should we respect this or not?
