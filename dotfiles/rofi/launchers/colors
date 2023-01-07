@@ -1,0 +1,18 @@
+/* colors */
+
+* {
+  al:      #45272cff;
+  bg:      #00000000;
+  bg0:     #00000066;
+  se:      #15151500;
+  fg:      #f8e4d7ff;
+  ac:      #45272cff;
+  red:     #ee0033ff;
+  green:   #61C766ff;
+  yellow:  #FDD835ff;
+  blue:    #42A5F5ff;
+  purple:  #BA68C8ff;
+  cyan:    #4DD0E1ff;
+}
+
+/* The red color used for he
